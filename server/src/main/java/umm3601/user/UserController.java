@@ -40,8 +40,7 @@ public class UserController {
    */
   public String getUser(String id) {
     FindIterable<Document> jsonUsers
-      = userCollection
-      .find(eq("_id", new ObjectId(id)));
+      = userCollection.find(eq("_id", new ObjectId(id)));
 
     Iterator<Document> iterator = jsonUsers.iterator();
     if (iterator.hasNext()) {
