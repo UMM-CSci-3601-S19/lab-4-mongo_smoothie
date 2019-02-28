@@ -35,6 +35,10 @@ BasicDBObject. Then the tree documents are added to the MongoCollection of docum
 BasicDBObject is turned into a Json object and then parsed into a document so it can be inserted into the document 
 collection using insertOne().
 
-6. It tests the users who are 37 are properly filtered. It tests this by 
+6. It tests the users who are 37 are properly filtered. It tests this by calling the function getUsers() and then checks
+that the number of objects returned is the same as the number of objects that are 37 in the database. It also checks the 
+names of the users to make sure they are correct. 
 
-7.
+7. The method addNewUser in UserRequestHandler starts the adding user process by takeing a request and response and then 
+parses the request so that it can hand the data to userController.addNewUser so that it can properly format the user info 
+into a hexadecimal id to be sent to the server. 
