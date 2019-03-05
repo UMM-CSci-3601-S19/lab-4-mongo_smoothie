@@ -22,6 +22,7 @@ export class TodoListComponent implements OnInit {
   public todoCategory:string;
   public todoBody: string;
   public todoStatus: string;
+  public todo_id: string;
 
   // The ID of the
   private highlightedID: string = '';

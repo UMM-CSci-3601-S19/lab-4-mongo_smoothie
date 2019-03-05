@@ -32,7 +32,7 @@
           <mat-expansion-panel #elem class="todos" [id]="todo._id" [expanded]="this.isHighlighted(todo)"
                                *ngFor="let todo of this.filterTodos(todoOwner, todoCategory, todoBody, todoStatus)">
             <mat-expansion-panel-header>
-              <mat-panel-title matTooltip="email: {{todo._id}}">{{todo.body}}</mat-panel-title>
+              <mat-panel-title matTooltip="{{todo._id}}">{{todo.body}}</mat-panel-title>
 
             </mat-expansion-panel-header>
             <mat-panel-description>Owner: {{todo.owner}}</mat-panel-description>
