@@ -56,7 +56,7 @@ export class TodoListComponent implements OnInit {
             console.log('The newTodo or dialogResult was ' + newTodo);
             console.log('The error was ' + JSON.stringify(err));
           });
-        
+
       }
     });
   }
