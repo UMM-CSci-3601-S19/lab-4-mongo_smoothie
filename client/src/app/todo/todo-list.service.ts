@@ -4,12 +4,12 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 import {Todo} from './todo';
-import {environment} from '../../environments/environment';
+import {todoEnvironment} from '../../environments/todoEnvironment';
 
 
 @Injectable()
 export class TodoListService {
-  readonly baseUrl: string = environment.API_URL + 'todos';
+  readonly baseUrl: string = todoEnvironment.API_URL + 'todos';
   private todoUrl: string = this.baseUrl;
 
   constructor(private http: HttpClient) {
@@ -20,8 +20,8 @@ export class TodoListService {
     return this.http.get<Todo[]>(this.todoUrl);
   }
 
-  getTodoById(id: string): Observable<Todo> {
-    return this.http.get<Todo>(this.todoUrl + '/' + id);
+  getTodoById(_id: string): Observable<Todo> {
+    return this.http.get<Todo>(this.todoUrl + '/' + _id);
   }
 
   /*
