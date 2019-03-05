@@ -23,13 +23,36 @@ export class AddTodoComponent implements OnInit {
       {type: 'required', message: 'Body is required'},
       {type: 'minlength', message: 'Body must be at least 2 characters long'},
       {type: 'maxlength', message: 'Body cannot be more than 25 characters long'},
-      {type: 'pattern', message: 'Body must contain only numbers and letters'},
-      {type: 'existingBody', message: 'Body has already been taken'}
-    ]
+      {type: 'pattern', message: 'Body must contain only numbers and letters'}
+    ],
 
-    // '_id': [
-    //
-    // ]
+    'owner': [
+      {type: 'required', message: 'Owner is required'},
+      {type: 'minlength', message: 'Owner must be at least 2 characters long'},
+      {type: 'maxlength', message: 'Owner cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'Owner must contain only numbers and letters'}
+      ],
+
+    'category': [
+      {type: 'required', message: 'Category is required'},
+      {type: 'minlength', message: 'Category must be at least 2 characters long'},
+      {type: 'maxlength', message: 'Category cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'Category must contain only numbers and letters'}
+    ],
+
+    'status': [
+      {type: 'required', message: 'Status is required'},
+      {type: 'minlength', message: 'Status must be at least 2 characters long'},
+      {type: 'maxlength', message: 'Status cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'Status must contain only numbers and letters'}
+    ],
+
+    '_id': [
+      {type: 'required', message: 'ID is required'},
+      {type: 'minlength', message: 'ID must be at least 2 characters long'},
+      {type: 'maxlength', message: 'ID cannot be more than 25 characters long'},
+      {type: 'pattern', message: 'ID must contain only numbers and letters'}
+    ]
   };
 
   createForms() {

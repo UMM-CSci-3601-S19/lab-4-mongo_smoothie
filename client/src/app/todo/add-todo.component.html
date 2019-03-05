@@ -6,35 +6,35 @@ is potentially helpful and contributed to the shaping of this example -->
     <h2 mat-dialog-title>New Todo</h2>
     <mat-dialog-content layout="column">
       <mat-form-field flex>
-        <input matInput #input id="nameField" placeholder="Name" [(ngModel)]="data.todo.name" formControlName="name"
+        <input matInput #input id="bodyField" placeholder="Body" [(ngModel)]="data.todo.body" formControlName="body"
                required>
-        <mat-error *ngFor="let validation of add_todo_validation_messages.name">
-          <mat-error class="error-message" id="name-error"
-                     *ngIf="addTodoForm.get('name').hasError(validation.type) && (addTodoForm.get('name').dirty || addTodoForm.get('name').touched)">
+        <mat-error *ngFor="let validation of add_todo_validation_messages.body">
+          <mat-error class="error-message" id="body-error"
+                     *ngIf="addTodoForm.get('body').hasError(validation.type) && (addTodoForm.get('body').dirty || addTodoForm.get('body').touched)">
             {{validation.message}}
           </mat-error>
         </mat-error>
       </mat-form-field>
       <mat-form-field flex>
-        <input matInput #input id="ageField" type="number" placeholder="Age" [(ngModel)]="data.todo.age"
-               formControlName="age">
-        <mat-error *ngFor="let validation of add_todo_validation_messages.age">
-          <mat-error class="error-message" id="age-error"
-                     *ngIf="addTodoForm.get('age').hasError(validation.type) && (addTodoForm.get('age').dirty || addTodoForm.get('age').touched)">
+        <input matInput #input id="ownerField" type="text" placeholder="Owner" [(ngModel)]="data.todo.owner"
+               formControlName="owner">
+        <mat-error *ngFor="let validation of add_todo_validation_messages.owner">
+          <mat-error class="error-message" id="owner-error"
+                     *ngIf="addTodoForm.get('owner').hasError(validation.type) && (addTodoForm.get('owner').dirty || addTodoForm.get('owner').touched)">
             {{validation.message}}
           </mat-error>
         </mat-error>
       </mat-form-field>
       <mat-form-field flex>
-        <input matInput #input id="companyField" placeholder="Company" [(ngModel)]="data.todo.company"
-               formControlName="company">
-      </mat-form-field>
+        <input matInput #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status"
+               formControlName="status">
+      </mat-form-field>email
       <mat-form-field flex>
-        <input matInput #input id="emailField" placeholder="Email" [(ngModel)]="data.todo.email"
-               formControlName="email">
-        <mat-error *ngFor="let validation of add_todo_validation_messages.email">
-          <mat-error class="error-message" id='email-error'
-                     *ngIf="addTodoForm.get('email').hasError(validation.type) && (addTodoForm.get('email').dirty || addTodoForm.get('email').touched)">
+        <input matInput #input id="categoryField" placeholder="category" [(ngModel)]="data.todo.category"
+               formControlName="category">
+        <mat-error *ngFor="let validation of add_todo_validation_messages.category">
+          <mat-error class="error-message" id='category-error'
+                     *ngIf="addTodoForm.get('category').hasError(validation.type) && (addTodoForm.get('category').dirty || addTodoForm.get('category').touched)">
             {{validation.message}}
           </mat-error>
         </mat-error>
