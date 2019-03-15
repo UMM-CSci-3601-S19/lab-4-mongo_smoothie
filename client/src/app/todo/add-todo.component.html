@@ -6,7 +6,7 @@ is potentially helpful and contributed to the shaping of this example -->
     <h2 mat-dialog-title>New Todo</h2>
     <mat-dialog-content layout="column">
       <mat-form-field flex>
-        <input matInput #input id="bodyField" placeholder="Body" [(ngModel)]="data.todo.body" formControlName="body"
+        <input matInput #input id="bodyField" placeholder= "Body" [(ngModel)]="data.todo.body" formControlName="body"
                required>
         <mat-error *ngFor="let validation of add_todo_validation_messages.body">
           <mat-error class="error-message" id="body-error"
@@ -28,7 +28,7 @@ is potentially helpful and contributed to the shaping of this example -->
       <mat-form-field flex>
         <input matInput #input id="statusField" placeholder="Status" [(ngModel)]="data.todo.status"
                formControlName="status">
-      </mat-form-field>email
+      </mat-form-field>
       <mat-form-field flex>
         <input matInput #input id="categoryField" placeholder="category" [(ngModel)]="data.todo.category"
                formControlName="category">

@@ -64,42 +64,42 @@ export class TodoListComponent implements OnInit {
   public filterTodos(searchOwner: string, searchCategory: string, searchBody: string, searchStatus: string): Todo[] {
 
     this.filteredTodos = this.todos;
-
-    // Filter by owner
-    if (searchOwner != null) {
-      searchOwner = searchOwner.toLocaleLowerCase();
-
-      this.filteredTodos = this.filteredTodos.filter(todo => {
-        return !searchOwner || todo.owner.toLowerCase().indexOf(searchOwner) !== -1;
-      });
-    }
-
- // Filter by category
-    if (searchCategory != null) {
-      searchCategory = searchCategory.toLocaleLowerCase();
-
-      this.filteredTodos = this.filteredTodos.filter(todo => {
-        return !searchCategory || todo.category.toLowerCase().indexOf(searchCategory) !== -1;
-      });
-    }
-
-    // Filter by body
-    if (searchBody != null) {
-      searchBody = searchBody.toLocaleLowerCase();
-
-      this.filteredTodos = this.filteredTodos.filter(todo => {
-        return !searchBody || todo.body.toLowerCase().indexOf(searchBody) !== -1;
-      });
-    }
-
- // Filter by status
-    if (searchStatus != null) {
-      searchStatus = searchStatus.toLocaleLowerCase();
-
-      this.filteredTodos = this.filteredTodos.filter(todo => {
-        return !searchStatus || todo.status.toLowerCase().indexOf(searchStatus) !== -1;
-      });
-    }
+ //
+ //    // Filter by owner
+ //    if (searchOwner != null) {
+ //      searchOwner = searchOwner.toLocaleLowerCase();
+ //
+ //      this.filteredTodos = this.filteredTodos.filter(todo => {
+ //        return !searchOwner || todo.owner.toLowerCase().indexOf(searchOwner) !== -1;
+ //      });
+ //    }
+ //
+ // // Filter by category
+ //    if (searchCategory != null) {
+ //      searchCategory = searchCategory.toLocaleLowerCase();
+ //
+ //      this.filteredTodos = this.filteredTodos.filter(todo => {
+ //        return !searchCategory || todo.category.toLowerCase().indexOf(searchCategory) !== -1;
+ //      });
+ //    }
+ //
+ //    // Filter by body
+ //    if (searchBody != null) {
+ //      searchBody = searchBody.toLocaleLowerCase();
+ //
+ //      this.filteredTodos = this.filteredTodos.filter(todo => {
+ //        return !searchBody || todo.body.toLowerCase().indexOf(searchBody) !== -1;
+ //      });
+ //    }
+ //
+ // // Filter by status
+ //    if (searchStatus != null) {
+ //      searchStatus = searchStatus.toLocaleLowerCase();
+ //
+ //      this.filteredTodos = this.filteredTodos.filter(todo => {
+ //        return !searchStatus || todo.status.toLowerCase().indexOf(searchStatus) !== -1;
+ //      });
+ //    }
 
     return this.filteredTodos;
   }
